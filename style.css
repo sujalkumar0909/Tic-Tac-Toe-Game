@@ -3,12 +3,14 @@
     padding: 0;
 }
 .heading{
+    filter:drop-shadow(10px 1px 20px rgb(0, 255, 102));
     text-align:center;    
     background-image:linear-gradient(green,rgb(45, 177, 58));
     background-clip:text;
     color:transparent;
     font-size:3em;
     margin-bottom:4vh;
+    font-family:cursive,sans-serif;
 }
 body{
     background-image:linear-gradient(black,rgb(80, 79, 79));
@@ -21,8 +23,9 @@ body{
     justify-content: center;
     align-items: center;
     font-size:4vw;
-
+    cursor:pointer;
 }
+
 
 .container{
     justify-content:center;
@@ -32,18 +35,24 @@ body{
 }
 .right-border{
     border-right:4px solid;
-    /* background-image:linear-gradient(green,rgb(45, 177, 58)); */
+    background-image:linear-gradient(rgb(86, 255, 1),rgb(224, 227, 63));
     background-clip:text;
     -webkit-background-clip:text;
-    /* -webkit-text-fill-color:transparent; */
+    -webkit-text-fill-color:transparent;
     border-image-slice:1;
     border-image-source:linear-gradient(green,rgb(45, 177, 58));
 
 }
+.bt0
+{
+    border:0;
+}
 .bottom-border{
     border-bottom:4px solid;
+    background-image:linear-gradient(rgb(86, 255, 1),rgb(224, 227, 63));
     background-clip:text;
     -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
     border-image-slice:1;
     border-image-source:linear-gradient(green,rgb(45, 177, 58));
 }
@@ -52,9 +61,10 @@ body{
    top:12vw;
    left:2vw;
    font-size:2vw;
+   font-family:cursive,sans-serif;
 }
 h1{
-    font-size:3vw;
+    font-size:2.5vw;
     margin-bottom:3px;
     color:transparent;
     background-image:linear-gradient(rgb(12, 140, 80),rgb(45, 177, 58));
@@ -69,17 +79,24 @@ h1{
     .gameinfo{
         color:aquamarine;
         position:absolute;
-        top:85vw;
+        top:80vw;
         left:35vw;
+    }
+    .boxtext{
+        font-size:60px;
     }
     .container{
         margin-top:100px;
         grid-template-columns:repeat(3,18vw);
         grid-template-rows:repeat(3,18vw);
     }
+    .btn{
+        margin-left:60px;
+    }
     h1{
         font-size:6vw;
         margin-left:-90px;
+        font-family:Georgia, 'Times New Roman', Times, serif;
     }
     .info{
         font-size:3vw;
@@ -92,3 +109,59 @@ h1{
         left:30px;
     }
 }
+.btn {
+    --color: #00A97F;
+    --color2: rgb(10, 25, 30);
+    padding: 0.8em 1.75em;
+    background-color: transparent;
+    border-radius: 6px;
+    border: .3px solid var(--color);
+    transition: .5s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 1.3vw;
+    font-family: 'Roboto', 'Segoe UI', sans-serif;
+    text-transform: uppercase;
+    color: var(--color);
+    margin-top:10px;
+   }
+   
+   .btn::after, .btn::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    transform: skew(90deg) translate(-50%, -50%);
+    position: absolute;
+    inset: 50%;
+    left: 25%;
+    z-index: -1;
+    transition: .5s ease-out;
+    background-color: var(--color);
+   }
+   
+   .btn::before {
+    top: -50%;
+    left: -25%;
+    transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::before {
+    transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover::after {
+    transform: skew(45deg) translate(-50%, -50%);
+   }
+   
+   .btn:hover {
+    color: var(--color2);
+   }
+   
+   .btn:active {
+    filter: brightness(.7);
+    transform: scale(.98);
+   }
