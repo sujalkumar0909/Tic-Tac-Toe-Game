@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.heading{
+    text-align:center;    
+    background-image:linear-gradient(green,rgb(45, 177, 58));
+    background-clip:text;
+    color:transparent;
+    font-size:3em;
+}
+body{
+    background-image:linear-gradient(black,grey);
+    width:100vw;
+    height:100vh;
+}
+.box{
+    color:white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
