@@ -12,22 +12,22 @@ const changeturn = () => {
 const checkwin = (event) => {
     let boxtext = document.getElementsByClassName("boxtext");
     let wins = [
-        [0, 1, 2],
-        [3, 4, 5],
-        [6, 7, 8],
-        [0, 3, 6],
-        [1, 4, 7],
-        [2, 5, 8],
-        [0, 4, 8],
-        [2, 4, 6],
+        [0, 1, 2, 37.5, 3.5, 0],
+        [3, 4, 5, 37.5, 11.5, 0],
+        [6, 7, 8, 37.5, 20, 0],
+        [0, 3, 6, 29.4, 12, 90],
+        [1, 4, 7, 37.4, 12, 90],
+        [2, 5, 8, 45.6, 12, 90],
+        [0, 4, 8, 38, 12, 45],
+        [2, 4, 6, 36, 13, 135],
     ]
     wins.forEach(e => {
         if ((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && (boxtext[e[2]].innerText === boxtext[e[1]].innerText) && (boxtext[e[0]].innerText !== "")) {
             document.querySelector(".info").innerText = boxtext[e[0]].innerText + " Won";
             gameover = true;
             win.play();
+            document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg)`;
             element.removeEventListener("click");
-            event.preventDefault();
         }
     })
 }
@@ -44,10 +44,6 @@ Array.from(boxes).forEach(element => {
             if (!gameover) {
                 document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
             }
-            else
-            {
-                event.preventDefault();
-            }
         }
     })
 })
@@ -57,6 +53,7 @@ reset.addEventListener("click", () => {
         element.innerText = "";
         del.play();
         turn ="X"; 
+        document.querySelector(".line").style.transform=`translate(0vw,0vw) rotate(0deg)`;
         gameover=false;
     })
     document.querySelector(".info").innerText = "Turn for X";

@@ -13,15 +13,16 @@
     font-family:cursive,sans-serif;
 }
 body{
-    background-image:linear-gradient(black,rgb(80, 79, 79));
+    background-image:linear-gradient(black,rgb(62, 62, 62));
     width:100vw;
     height:100vh;
 }
 .line{
-    background-color: black;
-    width:30vw;
-    height:3px;
-    position:relative;
+    background-color: rgb(7, 7, 7);
+    width:25vw;
+    height:4px;
+    position:absolute;
+    border-radius:14px;
 }
 .box{
     color:white;
@@ -38,6 +39,7 @@ body{
     display:grid;
     grid-template-columns:repeat(3,8vw);
     grid-template-rows: repeat(3,8vw);
+    position:relative;
 }
 .right-border{
     border-right:4px solid;
@@ -80,7 +82,7 @@ h1{
     color:aquamarine;
     margin-left:50px;
 }
-@media screen and (max-width:600px)
+/* @media screen and (max-width:600px)
 {
     .gameinfo{
         color:aquamarine;
@@ -114,9 +116,9 @@ h1{
         position:relative;
         left:30px;
     }
-}
+} */
 .btn {
-    --color: #00A97F;
+    --color: aquamarine;
     --color2: rgb(10, 25, 30);
     padding: 0.8em 1.75em;
     background-color: transparent;
