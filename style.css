@@ -121,6 +121,12 @@ h1{
         left:30px;
     }
 } */
+@media screen and (max-width:800px)
+{
+    .line{
+        visibility: hidden;
+    }
+}
 .btn {
     --color: aquamarine;
     --color2: rgb(10, 25, 30);
