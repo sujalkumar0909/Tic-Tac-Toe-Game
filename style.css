@@ -86,7 +86,7 @@ h1{
     color:aquamarine;
     margin-left:50px;
 }
-/* @media screen and (max-width:600px)
+@media screen and (max-width:600px)
 {
     .gameinfo{
         color:aquamarine;
@@ -120,7 +120,7 @@ h1{
         position:relative;
         left:30px;
     }
-} */
+}
 @media screen and (max-width:800px)
 {
     .line{
