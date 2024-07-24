@@ -10,12 +10,12 @@
     color:transparent;
     font-size:3em;
     margin-bottom:4vh;
-    font-family:cursive,sans-serif;
+    font-family:sans-serif;
 }
 body{
     background-image:linear-gradient(black,rgb(62, 62, 62));
     width:100vw;
-    height:100vh;
+    height:130vh;
 }
 .line{
     background-color: rgb(7, 7, 7);
@@ -115,11 +115,14 @@ h1{
     }
     .welcome{
         margin-top:50px;
+        font-size:30px;
     }
     .heading{
         position:relative;
         left:30px;
         font-size:8vw;
+        justify-content:center;
+        text-align:center;
     }
 }
 @media screen and (max-width:800px)
