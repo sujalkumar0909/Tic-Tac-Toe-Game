@@ -119,6 +119,7 @@ h1{
     .heading{
         position:relative;
         left:30px;
+        font-size:8vw;
     }
 }
 @media screen and (max-width:800px)
